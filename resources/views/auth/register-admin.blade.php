@@ -1,7 +1,7 @@
 @extends('admin.dashboard')
 @section('content_page')
     <div class="container">
-
+        <h2>إضافة مدير جديد</h2>
         <form method="POST" action="{{ route('register.admin') }}">
             @csrf
             <div class="mb-3">

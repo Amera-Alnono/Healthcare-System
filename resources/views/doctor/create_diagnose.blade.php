@@ -18,7 +18,7 @@
     <label for="prescription">Prescription:</label>
     <textarea name="prescription" id="prescription"></textarea>
 
-    <button type="submit">Save</button>
+    <button type="submit">Save and Send to patient</button>
 </form>
 @stop
 

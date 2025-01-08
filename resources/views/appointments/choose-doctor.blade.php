@@ -22,7 +22,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $doctor->name }}</h5>
+                        <h5 class="card-title">Dr.{{ $doctor->user->name }}</h5>
                         <p class="card-text">{{ $doctor->specialty }}</p>
                         <a href="{{ route('book.appointment.form', $doctor->id) }}" class="btn btn-primary">احجز موعدًا</a>
                     </div>

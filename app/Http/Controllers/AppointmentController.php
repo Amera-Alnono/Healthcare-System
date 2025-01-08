@@ -45,7 +45,6 @@ public function bookAppointment(Request $request, Doctor $doctor)
         'status' => 'required',
     ]);
 
-
     // تحقق من تعارض الموعد
     $conflict = Appointment::where('doctor_id', $doctor->id)
         ->where('AppointmentDate', $validated['AppointmentDate'])
@@ -72,9 +71,6 @@ public function bookAppointment(Request $request, Doctor $doctor)
         'updated_at' => now(),
     ]);
 
-    // Patient_Doctor::create([
-    // 'patient_id' => auth()->user()->patient->id, // المريض الحالي
-    // 'doctor_id' => $doctor->id,]);
 
     return redirect()->route('appointments.index')->with('success', 'تم حجز الموعد بنجاح!');
 }

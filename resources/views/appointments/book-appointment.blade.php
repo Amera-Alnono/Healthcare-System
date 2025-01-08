@@ -1,7 +1,7 @@
 @extends('patient.dashboard')
 @section('content_page')
 <div class="container">
-    <h2>حجز موعد مع {{ $doctor->name }}</h2>
+    <h2>dr.{{ $doctor->user->name }} حجز موعد مع  </h2>
     <form method="POST" action="{{ route('book.appointment', $doctor->id) }}">
         @csrf
         <div class="mb-3">
